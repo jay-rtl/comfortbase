@@ -1,0 +1,12 @@
+{
+  "name": "comfort-base",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Comfort Base premium hospitality website",
+  "scripts": {
+    "dev": "node server.js",
+    "preview": "node server.js",
+    "build": "node scripts/check.mjs",
+    "test": "node scripts/check.mjs"
+  }
+}
