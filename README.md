@@ -10,7 +10,7 @@ Requires Node.js 18 or newer. No package installation is required.
 npm run dev
 ```
 
-Open <http://localhost:4173>.
+Open <http://localhost:4173/comfortbase/>.
 
 ## Validation
 
@@ -23,9 +23,11 @@ npm test
 
 Add each verified third-party booking URL to the corresponding `externalBookingUrl` value in [`config/properties.js`](config/properties.js). Empty values produce a safe “Booking link coming soon” state.
 
-## Clean routes
+## GitHub Pages and clean routes
 
-The included Node preview server provides clean public routes and permanent redirects from legacy `.html` URLs. A production host must run `server.js` or reproduce its rewrite rules. Set `SITE_URL` in production when proxy headers do not expose the public origin; it is used for the dynamic sitemap and robots response.
+`npm run build` generates physical clean-route folders for GitHub Pages, including the individual property pages, sitemap and robots file. The project uses `/comfortbase/` as its GitHub Pages base path.
+
+The included Node preview server also provides clean routes and permanent redirects from legacy `.html` URLs. For a different repository name or custom domain, update the `<base>` value in the source pages and `siteOrigin` in `scripts/build-pages.mjs` before rebuilding.
 
 ## Content note
 

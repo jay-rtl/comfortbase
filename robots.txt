@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Add an absolute Sitemap URL here after the production domain is confirmed.
+Sitemap: https://jay-rtl.github.io/comfortbase/sitemap.xml

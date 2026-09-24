@@ -105,13 +105,13 @@
   });
 
   const services = {
-    transport: { title: 'Arrive with ease', image: '/assets/images/concierge-transport.webp', items: ['Airport transfers','Private drivers','Car hire','Local transportation'] },
-    dining: { title: 'Dining, your way', image: '/assets/images/concierge-dining.webp', items: ['Restaurant bookings','Private dining','Grocery delivery','Local recommendations'] },
-    experiences: { title: 'Make more of the city', image: '/assets/images/concierge-dining.webp', items: ['Local experiences','Tickets and events','Day trips','Tailored itineraries'] },
-    wellness: { title: 'Space to reset', image: '/assets/images/base-bedroom-01.webp', items: ['In-home massage','Fitness sessions','Wellness bookings','Self-care arrangements'] },
-    property: { title: 'Everything for your stay', image: '/assets/images/base-living-room-01.webp', items: ['Extra housekeeping','Linen requests','Grocery arrival','Stay assistance'] },
-    occasions: { title: 'Thoughtful moments', image: '/assets/images/concierge-dining.webp', items: ['Birthday arrangements','Romantic setups','Flowers and gifts','Celebrations'] },
-    business: { title: 'Work without friction', image: '/assets/images/comfort-base-hero.webp', items: ['Workspace support','Transport','Team dining','Extended stays'] }
+    transport: { title: 'Arrive with ease', image: 'assets/images/concierge-transport.webp', items: ['Airport transfers','Private drivers','Car hire','Local transportation'] },
+    dining: { title: 'Dining, your way', image: 'assets/images/concierge-dining.webp', items: ['Restaurant bookings','Private dining','Grocery delivery','Local recommendations'] },
+    experiences: { title: 'Make more of the city', image: 'assets/images/concierge-dining.webp', items: ['Local experiences','Tickets and events','Day trips','Tailored itineraries'] },
+    wellness: { title: 'Space to reset', image: 'assets/images/base-bedroom-01.webp', items: ['In-home massage','Fitness sessions','Wellness bookings','Self-care arrangements'] },
+    property: { title: 'Everything for your stay', image: 'assets/images/base-living-room-01.webp', items: ['Extra housekeeping','Linen requests','Grocery arrival','Stay assistance'] },
+    occasions: { title: 'Thoughtful moments', image: 'assets/images/concierge-dining.webp', items: ['Birthday arrangements','Romantic setups','Flowers and gifts','Celebrations'] },
+    business: { title: 'Work without friction', image: 'assets/images/comfort-base-hero.webp', items: ['Workspace support','Transport','Team dining','Extended stays'] }
   };
   const serviceButtons = document.querySelectorAll('.service-tab');
   const serviceImage = document.querySelector('#service-image');

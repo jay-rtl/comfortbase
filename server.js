@@ -4,6 +4,7 @@ const path = require('node:path');
 
 const root = __dirname;
 const port = Number(process.env.PORT || 4173);
+const basePath = '/comfortbase';
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.xml': 'application/xml; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.svg': 'image/svg+xml' };
 const cleanRoutes = new Map([
   ['/', 'index.html'],
@@ -30,23 +31,24 @@ http.createServer((req, res) => {
   const forwardedProto = String(req.headers['x-forwarded-proto'] || '').split(',')[0].trim();
   const forwardedHost = String(req.headers['x-forwarded-host'] || '').split(',')[0].trim();
   const publicOrigin = String(process.env.SITE_URL || `${forwardedProto || 'http'}://${forwardedHost || req.headers.host}`).replace(/\/$/, '');
-  const pathname = decodeURIComponent(requestUrl.pathname).replace(/\/$/, '') || '/';
+  const rawPathname = decodeURIComponent(requestUrl.pathname).replace(/\/$/, '') || '/';
+  const pathname = rawPathname === basePath ? '/' : rawPathname.startsWith(`${basePath}/`) ? rawPathname.slice(basePath.length) : rawPathname;
   if (pathname === '/robots.txt') {
     res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-cache' });
-    return res.end(`User-agent: *\nAllow: /\n\nSitemap: ${publicOrigin}/sitemap.xml\n`);
+    return res.end(`User-agent: *\nAllow: /\n\nSitemap: ${publicOrigin}${basePath}/sitemap.xml\n`);
   }
   if (pathname === '/sitemap.xml') {
-    const urls = [...cleanRoutes.keys()].map(route => `  <url><loc>${publicOrigin}${route}</loc></url>`).join('\n');
+    const urls = [...cleanRoutes.keys()].map(route => `  <url><loc>${publicOrigin}${basePath}${route}</loc></url>`).join('\n');
     res.writeHead(200, { 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'no-cache' });
     return res.end(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
   }
   if (legacyRoutes.has(pathname)) {
-    res.writeHead(301, { Location: legacyRoutes.get(pathname), 'Cache-Control': 'no-cache' });
+    res.writeHead(301, { Location: `${basePath}${legacyRoutes.get(pathname)}`, 'Cache-Control': 'no-cache' });
     return res.end();
   }
   if (pathname === '/property.html') {
     const id = requestUrl.searchParams.get('property') || 'parkside';
-    res.writeHead(301, { Location: `/stays/${propertySlugs[id] || propertySlugs.parkside}`, 'Cache-Control': 'no-cache' });
+    res.writeHead(301, { Location: `${basePath}/stays/${propertySlugs[id] || propertySlugs.parkside}`, 'Cache-Control': 'no-cache' });
     return res.end();
   }
   const relative = cleanRoutes.get(pathname) || pathname.replace(/^\/+/, '');

@@ -3,7 +3,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 
 const root = path.resolve(import.meta.dirname, '..');
-const pages = ['index.html', 'bases.html', 'property.html', 'concierge.html', 'about.html', 'extended-stays.html'];
+const pages = ['index.html', 'bases.html', 'property.html', 'concierge.html', 'about.html', 'extended-stays.html', 'our-bases/index.html', 'virtual-concierge/index.html', 'extended-stays/index.html', 'about/index.html', 'stays/the-parkside-base/index.html', 'stays/the-riverside-base/index.html', 'stays/the-garden-base/index.html', 'stays/the-executive-base/index.html'];
 const cleanRoutes = new Set(['/', '/our-bases', '/virtual-concierge', '/extended-stays', '/about']);
 const errors = [];
 for (const page of pages) {
@@ -16,6 +16,7 @@ for (const page of pages) {
     if (!fs.existsSync(path.resolve(root, clean))) errors.push(`${page}: missing ${clean}`);
   }
   if (!/<title>[^<]+<\/title>/.test(html)) errors.push(`${page}: missing title`);
+  if (!/<base href="\/comfortbase\/">/.test(html)) errors.push(`${page}: missing GitHub Pages base path`);
   if (!/<meta name="description"/.test(html)) errors.push(`${page}: missing description`);
   if (!/<meta name="robots" content="index,follow,max-image-preview:large"/.test(html)) errors.push(`${page}: missing indexable robots directive`);
   if (!/<meta property="og:image"/.test(html)) errors.push(`${page}: missing Open Graph image`);
