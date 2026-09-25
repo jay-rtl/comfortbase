@@ -35,9 +35,9 @@ Property listings and generated images are temporary concept content pending ver
 
 ## Local visual redesign
 
-The shared hospitality theme lives in `styles.css`: warm ivory `#F7F5F0`, sand `#EEEAE2`, charcoal-green `#18221D`, sage `#53634E`, and light sage `#E5E8DF`. Header/footer wordmarks use `assets/brand-mark.svg`, a navy and warm-gold CB monogram that also serves as the favicon.
+The shared hospitality theme lives in `styles.css`: warm ivory `#F7F5F0`, sand `#EEEAE2`, charcoal-green `#18221D`, sage `#53634E`, and light sage `#E5E8DF`. Header/footer wordmarks use `assets/brand-mark.svg`, a navy and warm-gold CB monogram. `assets/favicon.svg` adapts the mark for small sizes, and `assets/brand-lockup.svg` provides a standalone horizontal logo. The live wordmark uses the site's Manrope font; the standalone SVG falls back to Arial where Manrope is unavailable.
 
-Photography remains local in `assets/images/`; the redesign reuses the existing concept images. Replace these files with approved photography (and update alt text where needed). Property image assignments remain in `config/properties.js`. Edit the root HTML templates, then run the build to refresh clean routes.
+Photography remains local in `assets/images/`; `arrival-editorial.jpg` is a new homepage concept image with quiet space for the headline. Its generation prompt and provenance are recorded in `assets/images/CONCEPT-IMAGERY.md`. Other pages reuse the existing concept images with distinct hero subjects. Replace these files with approved photography (and update alt text where needed). Property image assignments remain in `config/properties.js`. Edit the root HTML templates, then run the build to refresh clean routes.
 
 Responsive browser QA covers all nine routes at 390, 768, 1024 and 1440 pixels, plus existing interactive controls:
 
