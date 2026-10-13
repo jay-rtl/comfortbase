@@ -3,7 +3,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 
 const root = path.resolve(import.meta.dirname, '..');
-const pages = ['index.html', 'bases.html', 'property.html', 'concierge.html', 'about.html', 'extended-stays.html', 'our-bases/index.html', 'virtual-concierge/index.html', 'extended-stays/index.html', 'about/index.html', 'stays/the-parkside-base/index.html', 'stays/the-riverside-base/index.html', 'stays/the-garden-base/index.html', 'stays/the-executive-base/index.html'];
+const pages = ['index.html', 'bases.html', 'property.html', 'concierge.html', 'about.html', 'extended-stays.html', 'our-bases/index.html', 'virtual-concierge/index.html', 'extended-stays/index.html', 'about/index.html', 'stays/the-sydney-base/index.html', 'stays/the-riverside-base/index.html', 'stays/the-garden-base/index.html', 'stays/the-executive-base/index.html'];
 const cleanRoutes = new Set(['/', '/our-bases', '/virtual-concierge', '/extended-stays', '/about']);
 const errors = [];
 for (const page of pages) {
@@ -47,5 +47,12 @@ if (/class="booking-panel"[\s\S]*?type="date"/.test(detailMarkup)) errors.push('
 if ((detailMarkup.match(/data-booking-link/g) || []).length < 3) errors.push('Property detail page is missing booking CTA bindings');
 const clientScript = fs.readFileSync(path.join(root, 'script.js'), 'utf8');
 if (!clientScript.includes("rel = 'noopener noreferrer'")) errors.push('External booking links are missing safe rel handling');
+const firstListing = properties.sydney;
+const firstPage = fs.readFileSync(path.join(root, 'stays/the-sydney-base/index.html'), 'utf8');
+if (!firstListing?.detailsPending || [firstListing.guests, firstListing.bedrooms, firstListing.bathrooms].some(value => value !== null)) errors.push('Sydney listing must not invent unconfirmed capacity');
+if (!firstPage.includes('q=-33.8700073,151.194134') || !firstPage.includes('data-property-map><h2>Location')) errors.push('Sydney listing is missing the supplied map location');
+if ((firstPage.match(/data-gallery>/g) || []).length !== 1 || !firstPage.includes('View concept image')) errors.push('Sydney listing must show one labelled concept image');
+if (/Secure parking|Fast Wi-Fi|From 3:00 pm|South Yarra/.test(firstPage)) errors.push('Sydney listing still contains dummy property facts');
+if (!firstPage.includes('stays/the-sydney-base/')) errors.push('Sydney canonical route is missing');
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log(`Checked ${pages.length} pages and ${Object.keys(properties || {}).length} property records: markup, booking configuration, metadata and local asset references OK.`);

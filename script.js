@@ -9,13 +9,13 @@
   if (propertyConfig && document.querySelector('[data-property-title]')) {
     const routeSlug = location.pathname.split('/').filter(Boolean).at(-1);
     const routeProperty = Object.entries(propertyConfig).find(([, item]) => item.slug === routeSlug)?.[0];
-    const requestedId = routeProperty || new URLSearchParams(location.search).get('property') || 'parkside';
-    const property = propertyConfig[requestedId] || propertyConfig.parkside;
+    const requestedId = routeProperty || new URLSearchParams(location.search).get('property') || 'sydney';
+    const property = propertyConfig[requestedId] || propertyConfig.sydney;
     document.title = `${property.title} | Comfort Base`;
     const descriptionMeta = document.querySelector('meta[name="description"]');
     if (descriptionMeta) descriptionMeta.content = `${property.title} in ${property.location}. ${property.description}`;
     const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) canonical.href = `/stays/${property.slug}`;
+    if (canonical) canonical.href = new URL(`stays/${property.slug}/`, document.baseURI).href;
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogTitle) ogTitle.content = `${property.title} | Comfort Base`;
@@ -23,9 +23,9 @@
     document.querySelectorAll('[data-property-title]').forEach(el => { el.textContent = property.title; });
     document.querySelectorAll('[data-property-location]').forEach(el => { el.textContent = property.location; });
     document.querySelectorAll('[data-property-short-location]').forEach(el => { el.textContent = property.location.split(' · ')[0]; });
-    document.querySelectorAll('[data-property-guests]').forEach(el => { el.textContent = `${property.guests} guest${property.guests === 1 ? '' : 's'}`; });
-    document.querySelectorAll('[data-property-bedrooms]').forEach(el => { el.textContent = `${property.bedrooms} bedroom${property.bedrooms === 1 ? '' : 's'}`; });
-    document.querySelectorAll('[data-property-bathrooms]').forEach(el => { el.textContent = `${property.bathrooms} bathroom${property.bathrooms === 1 ? '' : 's'}`; });
+    document.querySelectorAll('[data-property-guests]').forEach(el => { el.textContent = property.guests == null ? 'Guests: to be confirmed' : `${property.guests} guest${property.guests === 1 ? '' : 's'}`; });
+    document.querySelectorAll('[data-property-bedrooms]').forEach(el => { el.textContent = property.bedrooms == null ? 'Bedrooms: to be confirmed' : `${property.bedrooms} bedroom${property.bedrooms === 1 ? '' : 's'}`; });
+    document.querySelectorAll('[data-property-bathrooms]').forEach(el => { el.textContent = property.bathrooms == null ? 'Bathrooms: to be confirmed' : `${property.bathrooms} bathroom${property.bathrooms === 1 ? '' : 's'}`; });
     document.querySelectorAll('[data-property-description]').forEach(el => { el.textContent = property.description; });
     document.querySelectorAll('[data-property-parking]').forEach(el => { el.textContent = property.parking; });
     document.querySelectorAll('[data-property-nearby]').forEach(el => { el.textContent = property.nearby; });

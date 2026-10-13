@@ -5,18 +5,21 @@
  * show a safe "Booking link coming soon" state instead of a broken link.
  */
 window.COMFORT_BASE_PROPERTIES = {
-  parkside: {
-    slug: 'the-parkside-base',
-    title: 'The Parkside Base',
-    location: 'South Yarra · Melbourne',
-    guests: 4,
-    bedrooms: 2,
-    bathrooms: 2,
-    description: 'A thoughtfully prepared two-bedroom base near leafy parklands, neighbourhood dining and easy city connections. Designed for weekends, work trips and longer stays.',
-    parking: 'One secure allocated space is included.',
-    nearby: 'Royal Botanic Gardens · Chapel Street dining · Melbourne CBD · Arts Precinct',
-    images: ['assets/images/base-living-room-01.webp', 'assets/images/base-bedroom-01.webp', 'assets/images/comfort-base-hero.webp'],
-    imageAlts: ['Sunlit living room with city view', 'Calm primary bedroom', 'Open-plan living and kitchen space'],
+  sydney: {
+    slug: 'the-sydney-base',
+    title: 'The Sydney Base',
+    location: 'Sydney · New South Wales',
+    guests: null,
+    bedrooms: null,
+    bathrooms: null,
+    detailsPending: true,
+    description: 'Introducing The Sydney Base, our first Sydney listing. Explore the supplied location below; property details and original photography will be added soon.',
+    parking: 'To be confirmed.',
+    nearby: 'Explore the surrounding area using the map below. Local recommendations will be added once confirmed.',
+    images: ['assets/images/sydney-base-placeholder.jpg'],
+    imageAlts: ['AI-generated concept living room; not a photograph of The Sydney Base'],
+    mapUrl: 'https://www.google.com/maps?q=-33.8700073,151.194134',
+    mapEmbedUrl: 'https://www.google.com/maps?q=-33.8700073,151.194134&z=17&output=embed',
     externalBookingUrl: ''
   },
   riverside: {

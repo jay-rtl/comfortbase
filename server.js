@@ -12,10 +12,10 @@ const cleanRoutes = new Map([
   ['/virtual-concierge', 'concierge.html'],
   ['/extended-stays', 'extended-stays.html'],
   ['/about', 'about.html'],
-  ['/stays/the-parkside-base', 'property.html'],
-  ['/stays/the-riverside-base', 'property.html'],
-  ['/stays/the-garden-base', 'property.html'],
-  ['/stays/the-executive-base', 'property.html']
+  ['/stays/the-sydney-base', 'stays/the-sydney-base/index.html'],
+  ['/stays/the-riverside-base', 'stays/the-riverside-base/index.html'],
+  ['/stays/the-garden-base', 'stays/the-garden-base/index.html'],
+  ['/stays/the-executive-base', 'stays/the-executive-base/index.html']
 ]);
 const legacyRoutes = new Map([
   ['/index.html', '/'],
@@ -24,7 +24,7 @@ const legacyRoutes = new Map([
   ['/extended-stays.html', '/extended-stays'],
   ['/about.html', '/about']
 ]);
-const propertySlugs = { parkside: 'the-parkside-base', riverside: 'the-riverside-base', garden: 'the-garden-base', executive: 'the-executive-base' };
+const propertySlugs = { sydney: 'the-sydney-base', riverside: 'the-riverside-base', garden: 'the-garden-base', executive: 'the-executive-base' };
 
 http.createServer((req, res) => {
   const requestUrl = new URL(req.url, `http://${req.headers.host}`);
@@ -47,8 +47,8 @@ http.createServer((req, res) => {
     return res.end();
   }
   if (pathname === '/property.html') {
-    const id = requestUrl.searchParams.get('property') || 'parkside';
-    res.writeHead(301, { Location: `${basePath}/stays/${propertySlugs[id] || propertySlugs.parkside}`, 'Cache-Control': 'no-cache' });
+    const id = requestUrl.searchParams.get('property') || 'sydney';
+    res.writeHead(301, { Location: `${basePath}/stays/${propertySlugs[id] || propertySlugs.sydney}`, 'Cache-Control': 'no-cache' });
     return res.end();
   }
   const relative = cleanRoutes.get(pathname) || pathname.replace(/^\/+/, '');

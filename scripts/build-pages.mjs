@@ -36,15 +36,26 @@ for (const property of Object.values(properties)) {
   html = replaceText(html, 'data-property-title', property.title);
   html = replaceText(html, 'data-property-location', property.location);
   html = replaceText(html, 'data-property-short-location', property.location.split(' · ')[0]);
-  html = replaceText(html, 'data-property-guests', `${property.guests} guest${property.guests === 1 ? '' : 's'}`);
-  html = replaceText(html, 'data-property-bedrooms', `${property.bedrooms} bedroom${property.bedrooms === 1 ? '' : 's'}`);
-  html = replaceText(html, 'data-property-bathrooms', `${property.bathrooms} bathroom${property.bathrooms === 1 ? '' : 's'}`);
+  html = replaceText(html, 'data-property-guests', property.guests == null ? 'Guests: to be confirmed' : `${property.guests} guest${property.guests === 1 ? '' : 's'}`);
+  html = replaceText(html, 'data-property-bedrooms', property.bedrooms == null ? 'Bedrooms: to be confirmed' : `${property.bedrooms} bedroom${property.bedrooms === 1 ? '' : 's'}`);
+  html = replaceText(html, 'data-property-bathrooms', property.bathrooms == null ? 'Bathrooms: to be confirmed' : `${property.bathrooms} bathroom${property.bathrooms === 1 ? '' : 's'}`);
   html = replaceText(html, 'data-property-description', property.description);
   html = replaceText(html, 'data-property-parking', property.parking);
   html = replaceText(html, 'data-property-nearby', property.nearby);
   property.images.forEach((image, index) => {
     html = html.replace(new RegExp(`(<img data-property-image="${index}" )src="[^"]*" alt="[^"]*"`), `$1src="${image}" alt="${escapeHtml(property.imageAlts[index])}"`);
   });
+  if (property.detailsPending) {
+    html = replaceText(html, 'data-property-intro', 'Your next Sydney base.');
+    html = html.replace(/<div class="detail-section" data-property-amenities>[\s\S]*?<\/div>/, '<div class="detail-section" data-property-amenities><h2>Amenities</h2><p>To be confirmed. Full amenities will be added with the property details.</p></div>');
+    html = html.replace(/<div class="detail-section" data-property-stay>[\s\S]*?<\/div>/, '<div class="detail-section" data-property-stay><h2>Stay information</h2><p>Check-in, check-out, parking and house rules are to be confirmed.</p></div>');
+    html = html.replace(/<button data-gallery><img data-property-image="[12]"[^>]*><\/button>/g, '').replace('class="gallery"', 'class="gallery gallery-single"').replace('View gallery · 3 images', 'View concept image');
+    html = html.replace('Check live availability, select your dates and securely complete your reservation with our booking partner.', 'Booking details are coming soon. Contact us to enquire about this property.');
+    html = html.replace('Availability and reservations are managed through our booking partner.', '<a href="mailto:admin@comfortbase.com.au?subject=The%20Sydney%20Base%20enquiry">Enquire about The Sydney Base</a>');
+  }
+  if (property.mapUrl) {
+    html = html.replace('<div class="detail-section" data-property-map hidden></div>', '<div class="detail-section" data-property-map><h2>Location</h2><p>Map pin for the supplied location. Exact property address to be confirmed.</p><iframe class="property-map" title="The Sydney Base location map" src="' + escapeHtml(property.mapEmbedUrl) + '" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-links"><a class="text-link" href="' + escapeHtml(property.mapUrl) + '" target="_blank" rel="noopener noreferrer">Open Google Maps ↗</a></div></div>');
+  }
   const output = path.join(root, 'stays', property.slug, 'index.html');
   fs.mkdirSync(path.dirname(output), { recursive: true });
   fs.writeFileSync(output, html, 'utf8');

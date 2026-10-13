@@ -45,7 +45,7 @@ try {
   };
   const basePath = '/comfortbase';
   const checks = [
-    ...['/','/our-bases/','/stays/the-parkside-base/','/stays/the-riverside-base/','/stays/the-garden-base/','/stays/the-executive-base/','/virtual-concierge/','/about/','/extended-stays/'].flatMap(route => [390,768,1024,1440].map(width => ({ route: `${basePath}${route}`, width, height: width < 700 ? 844 : 1000 })))
+    ...['/','/our-bases/','/stays/the-sydney-base/','/stays/the-riverside-base/','/stays/the-garden-base/','/stays/the-executive-base/','/virtual-concierge/','/about/','/extended-stays/'].flatMap(route => [390,768,1024,1440].map(width => ({ route: `${basePath}${route}`, width, height: width < 700 ? 844 : 1000 })))
   ];
   const failures = [];
   let checkedViewports = 0;
@@ -110,13 +110,13 @@ try {
   const concierge = conciergeTest.result.value;
   if (!concierge.service || !concierge.status.includes('Demo mode') || !concierge.faq) failures.push({ interaction: 'concierge controls', result: concierge });
 
-  for (const [propertySlug, expectedTitle] of [['the-parkside-base','The Parkside Base'],['the-riverside-base','The Riverside Base'],['the-garden-base','The Garden Base'],['the-executive-base','The Executive Base']]) {
+  for (const [propertySlug, expectedTitle] of [['the-sydney-base','The Sydney Base'],['the-riverside-base','The Riverside Base'],['the-garden-base','The Garden Base'],['the-executive-base','The Executive Base']]) {
     await navigate(`http://127.0.0.1:4173${basePath}/stays/${propertySlug}`); await delay(350);
     const propertyTest = await send('Runtime.evaluate', { expression: `({title:document.querySelector('[data-property-title]').textContent,dates:document.querySelectorAll('.booking-panel input[type="date"]').length,booking:[...document.querySelectorAll('[data-booking-link]')].map(a=>({href:a.getAttribute('href'),disabled:a.getAttribute('aria-disabled'),text:a.textContent.trim()}))})`, returnByValue: true });
     const propertyResult = propertyTest.result.value;
     if (propertyResult.title !== expectedTitle || propertyResult.dates !== 0 || propertyResult.booking.some(link => link.href || link.disabled !== 'true' || !link.text.toLowerCase().includes('coming soon'))) failures.push({ interaction: `property booking ${propertySlug}`, result: propertyResult });
   }
-  await navigate(`http://127.0.0.1:4173${basePath}/stays/the-parkside-base`); await delay(350);
+  await navigate(`http://127.0.0.1:4173${basePath}/stays/the-sydney-base`); await delay(350);
   const galleryTest = await send('Runtime.evaluate', { expression: `document.querySelector('[data-gallery]').click();({open:document.querySelector('.modal').classList.contains('open'),hidden:document.querySelector('.modal').getAttribute('aria-hidden')})`, returnByValue: true });
   if (!galleryTest.result.value.open || galleryTest.result.value.hidden !== 'false') failures.push({ interaction: 'property gallery', result: galleryTest.result.value });
   console.log('Interaction checks: mobile menu, concierge selector/form/FAQ, four property booking states, and property gallery completed.');
