@@ -24,6 +24,7 @@ window.COMFORT_BASE_PROPERTIES = {
     externalBookingUrl: ''
   },
   riverside: {
+    sample: true,
     slug: 'the-riverside-base',
     title: 'The Riverside Base',
     location: 'Newstead · Brisbane',
@@ -38,6 +39,7 @@ window.COMFORT_BASE_PROPERTIES = {
     externalBookingUrl: ''
   },
   garden: {
+    sample: true,
     slug: 'the-garden-base',
     title: 'The Garden Base',
     location: 'Richmond · Melbourne',
@@ -52,6 +54,7 @@ window.COMFORT_BASE_PROPERTIES = {
     externalBookingUrl: ''
   },
   executive: {
+    sample: true,
     slug: 'the-executive-base',
     title: 'The Executive Base',
     location: 'Sydney CBD · Sydney',

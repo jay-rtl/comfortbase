@@ -413,6 +413,9 @@ a { color: inherit; text-decoration: none; }
 .card-body { padding: clamp(20px,2.2vw,30px); }
 .card-place { font-size: .69rem; letter-spacing: .1em; }
 .card-tag { border-radius: 2px; }
+.card-tag.sample-listing-tag { color: #fff; background: #53634e; }
+.sample-listing-note { margin: 12px 0 0; color: #46533f; font-size: .85rem; line-height: 1.5; }
+.sample-listing-notice { margin: 28px 0 0; padding: 18px 22px; color: #18221d; background: #e5e8df; border-left: 3px solid #53634e; line-height: 1.6; }
 .card-link > span { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid var(--line); border-radius: 50%; }
 .stay-reasons .property-card { background: transparent; border: 0; border-radius: 0; border-top: 1px solid var(--line); }
 .stay-reasons .property-card:hover { transform: none; box-shadow: none; }

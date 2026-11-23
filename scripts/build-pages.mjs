@@ -11,15 +11,26 @@ const pageCopies = {
   'about.html': 'about/index.html'
 };
 
+const propertyContext = { window: {} };
+vm.runInNewContext(fs.readFileSync(path.join(root, 'config', 'properties.js'), 'utf8'), propertyContext);
+const properties = propertyContext.window.COMFORT_BASE_PROPERTIES;
+for (const filename of ['index.html', 'bases.html']) {
+  const file = path.join(root, filename);
+  let html = fs.readFileSync(file, 'utf8');
+  html = html.replace(/<article class="property-card"[^>]*>[\s\S]*?<\/article>/g, card => {
+    const property = Object.values(properties).find(item => card.includes(`href="stays/${item.slug}/"`));
+    if (!property?.sample) return card;
+    card = card.replace(/<span class="card-tag">[^<]*<\/span>/, '<span class="card-tag sample-listing-tag">Sample only</span>');
+    if (!card.includes('sample-listing-note')) card = card.replace(/(<h3 class="card-title">[^<]*<\/h3>)/, '$1<p class="sample-listing-note">Sample listing. Not available for booking.</p>');
+    return card;
+  });
+  fs.writeFileSync(file, html, 'utf8');
+}
 for (const [sourceName, outputName] of Object.entries(pageCopies)) {
   const output = path.join(root, outputName);
   fs.mkdirSync(path.dirname(output), { recursive: true });
   fs.writeFileSync(output, fs.readFileSync(path.join(root, sourceName), 'utf8'), 'utf8');
 }
-
-const propertyContext = { window: {} };
-vm.runInNewContext(fs.readFileSync(path.join(root, 'config', 'properties.js'), 'utf8'), propertyContext);
-const properties = propertyContext.window.COMFORT_BASE_PROPERTIES;
 const template = fs.readFileSync(path.join(root, 'property.html'), 'utf8');
 const escapeHtml = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const replaceText = (html, attribute, value) => html.replace(new RegExp(`(<[^>]+${attribute}[^>]*>)[^<]*(<\\/)`, 'g'), `$1${escapeHtml(value)}$2`);
@@ -46,6 +57,20 @@ for (const property of Object.values(properties)) {
   property.images.forEach((image, index) => {
     html = html.replace(new RegExp(`(<img data-property-image="${index}" )src="[^"]*" alt="[^"]*"`), `$1src="${image}" alt="${escapeHtml(property.imageAlts[index])}"`);
   });
+  if (property.sample) {
+    html = html.replace(/<title>[^<]+<\/title>/, `<title>${escapeHtml(property.title)} | Sample only | Comfort Base</title>`)
+      .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${escapeHtml(property.title)} | Sample only | Comfort Base">`)
+      .replace(/(<meta name="description" content=")/, '$1Sample listing for design demonstration only. ')
+      .replace(/(<meta property="og:description" content=")/, '$1Sample listing for design demonstration only. ')
+      .replace(/(<main[^>]*>)/, '$1<div class="container"><p class="sample-listing-notice"><strong>Sample only.</strong> This is a demonstration listing. The location, property details and generated images are examples. This property is not available for booking.</p></div>')
+      .replace('Check live availability, select your dates and securely complete your reservation with our booking partner.', 'This sample listing is for design demonstration only and is not available for booking.')
+      .replace('Availability and reservations are managed through our booking partner.', 'The location, capacity and amenities shown are sample details.')
+      .replaceAll('data-missing-label="Booking coming soon"', 'data-missing-label="Sample only"')
+      .replaceAll('data-missing-label="Booking link coming soon"', 'data-missing-label="Sample only"')
+      .replaceAll('>Book your stay <span>', '>Sample only <span>')
+      .replaceAll('>Book Your Stay <span>', '>Sample only <span>')
+      .replaceAll('>Check Availability &amp; Book <span>', '>Sample only <span>');
+  }
   if (property.detailsPending) {
     html = replaceText(html, 'data-property-intro', 'Your next Sydney base.');
     html = html.replace(/<div class="detail-section" data-property-amenities>[\s\S]*?<\/div>/, '<div class="detail-section" data-property-amenities><h2>Amenities</h2><p>To be confirmed. Full amenities will be added with the property details.</p></div>');

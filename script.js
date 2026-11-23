@@ -11,15 +11,15 @@
     const routeProperty = Object.entries(propertyConfig).find(([, item]) => item.slug === routeSlug)?.[0];
     const requestedId = routeProperty || new URLSearchParams(location.search).get('property') || 'sydney';
     const property = propertyConfig[requestedId] || propertyConfig.sydney;
-    document.title = `${property.title} | Comfort Base`;
+    document.title = `${property.title}${property.sample ? ' | Sample only' : ''} | Comfort Base`;
     const descriptionMeta = document.querySelector('meta[name="description"]');
-    if (descriptionMeta) descriptionMeta.content = `${property.title} in ${property.location}. ${property.description}`;
+    if (descriptionMeta) descriptionMeta.content = `${property.sample ? 'Sample listing for design demonstration only. ' : ''}${property.title} in ${property.location}. ${property.description}`;
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) canonical.href = new URL(`stays/${property.slug}/`, document.baseURI).href;
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogTitle) ogTitle.content = `${property.title} | Comfort Base`;
-    if (ogDescription) ogDescription.content = property.description;
+    if (ogTitle) ogTitle.content = `${property.title}${property.sample ? ' | Sample only' : ''} | Comfort Base`;
+    if (ogDescription) ogDescription.content = `${property.sample ? 'Sample listing for design demonstration only. ' : ''}${property.description}`;
     document.querySelectorAll('[data-property-title]').forEach(el => { el.textContent = property.title; });
     document.querySelectorAll('[data-property-location]').forEach(el => { el.textContent = property.location; });
     document.querySelectorAll('[data-property-short-location]').forEach(el => { el.textContent = property.location.split(' · ')[0]; });
@@ -35,7 +35,7 @@
     });
     document.querySelectorAll('[data-booking-link]').forEach(link => {
       const label = link.dataset.bookingLabel || 'Book Your Stay';
-      if (property.externalBookingUrl) {
+      if (property.externalBookingUrl && !property.sample) {
         link.href = property.externalBookingUrl;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';

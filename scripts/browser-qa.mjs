@@ -114,7 +114,8 @@ try {
     await navigate(`http://127.0.0.1:4173${basePath}/stays/${propertySlug}`); await delay(350);
     const propertyTest = await send('Runtime.evaluate', { expression: `({title:document.querySelector('[data-property-title]').textContent,dates:document.querySelectorAll('.booking-panel input[type="date"]').length,booking:[...document.querySelectorAll('[data-booking-link]')].map(a=>({href:a.getAttribute('href'),disabled:a.getAttribute('aria-disabled'),text:a.textContent.trim()}))})`, returnByValue: true });
     const propertyResult = propertyTest.result.value;
-    if (propertyResult.title !== expectedTitle || propertyResult.dates !== 0 || propertyResult.booking.some(link => link.href || link.disabled !== 'true' || !link.text.toLowerCase().includes('coming soon'))) failures.push({ interaction: `property booking ${propertySlug}`, result: propertyResult });
+    const expectedBookingLabel = propertySlug === 'the-sydney-base' ? 'coming soon' : 'sample only';
+    if (propertyResult.title !== expectedTitle || propertyResult.dates !== 0 || propertyResult.booking.some(link => link.href || link.disabled !== 'true' || !link.text.toLowerCase().includes(expectedBookingLabel))) failures.push({ interaction: `property booking ${propertySlug}`, result: propertyResult });
   }
   await navigate(`http://127.0.0.1:4173${basePath}/stays/the-sydney-base`); await delay(350);
   const galleryTest = await send('Runtime.evaluate', { expression: `document.querySelector('[data-project-photo]').click();({open:document.querySelector('.project-dialog').open,hidden:String(!document.querySelector('.project-dialog').open)})`, returnByValue: true });
