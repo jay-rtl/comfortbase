@@ -5,7 +5,7 @@ const path = require('node:path');
 const root = __dirname;
 const port = Number(process.env.PORT || 4173);
 const basePath = '/comfortbase';
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.xml': 'application/xml; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.svg': 'image/svg+xml' };
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.avif': 'image/avif', '.mp4': 'video/mp4', '.jpg': 'image/jpeg', '.png': 'image/png', '.xml': 'application/xml; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.svg': 'image/svg+xml' };
 const cleanRoutes = new Map([
   ['/', 'index.html'],
   ['/our-bases', 'bases.html'],
@@ -18,6 +18,7 @@ const cleanRoutes = new Map([
   ['/stays/the-executive-base', 'stays/the-executive-base/index.html']
 ]);
 const legacyRoutes = new Map([
+  ['/projects/151-harris-st-pyrmont', '/stays/the-sydney-base/'],
   ['/index.html', '/'],
   ['/bases.html', '/our-bases'],
   ['/concierge.html', '/virtual-concierge'],
@@ -57,6 +58,24 @@ http.createServer((req, res) => {
   if (fs.existsSync(target) && fs.statSync(target).isDirectory()) target = path.join(target, 'index.html');
   if (!fs.existsSync(target) && !path.extname(target)) target += '.html';
   if (!fs.existsSync(target)) return end(404, 'Not found');
+  if (path.extname(target) === '.mp4') {
+    const size = fs.statSync(target).size;
+    const headers = { 'Content-Type': 'video/mp4', 'Accept-Ranges': 'bytes', 'Cache-Control': 'no-cache' };
+    let start = 0, end = size - 1;
+    if (req.headers.range) {
+      const match = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range);
+      if (!match || (!match[1] && !match[2])) return invalidRange();
+      if (!match[1]) start = Math.max(0, size - Number(match[2]));
+      else { start = Number(match[1]); if (match[2]) end = Math.min(end, Number(match[2])); }
+      if (!Number.isSafeInteger(start) || !Number.isSafeInteger(end) || start < 0 || start > end || start >= size) return invalidRange();
+      headers['Content-Range'] = `bytes ${start}-${end}/${size}`;
+    }
+    headers['Content-Length'] = end - start + 1;
+    res.writeHead(req.headers.range ? 206 : 200, headers);
+    if (req.method === 'HEAD') return res.end();
+    return fs.createReadStream(target, { start, end }).on('error', () => res.destroy()).pipe(res);
+    function invalidRange() { res.writeHead(416, { 'Content-Range': `bytes */${size}` }); res.end(); }
+  }
   res.writeHead(200, { 'Content-Type': types[path.extname(target)] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
   fs.createReadStream(target).pipe(res);
   function end(code, body) { res.writeHead(code, { 'Content-Type': 'text/plain; charset=utf-8' }); res.end(body); }

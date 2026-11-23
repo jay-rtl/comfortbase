@@ -1,0 +1,31 @@
+{
+  "source": "Client-supplied Video archive",
+  "videos": [
+    {
+      "title": "A walk through 151 Harris St",
+      "original": "151 Harris St, Pyrmont(Airbnb).mp4",
+      "originalSha256": "fa65d12b2357c43817fe14c6cf7f5e65880cfe624f4094f9fe3ac2d4b10d4c33",
+      "originalBytes": 241292858,
+      "src": "assets/projects/151-harris-st-pyrmont/video/property-walkthrough.mp4",
+      "poster": "assets/projects/151-harris-st-pyrmont/video/property-walkthrough-poster.webp",
+      "bytes": 11725632,
+      "width": 1280,
+      "height": 720,
+      "duration": 42.8,
+      "fullDecodePassed": true
+    },
+    {
+      "title": "Before & after",
+      "original": "151 Harris St, Pyrmont(Before&After).mp4",
+      "originalSha256": "a4e6aef4f91de539a27ce448386372728fd013852f775d6d37e592ccf2a66559",
+      "originalBytes": 415795043,
+      "src": "assets/projects/151-harris-st-pyrmont/video/before-and-after.mp4",
+      "poster": "assets/projects/151-harris-st-pyrmont/video/before-and-after-poster.webp",
+      "bytes": 19965862,
+      "width": 1280,
+      "height": 720,
+      "duration": 73.68,
+      "fullDecodePassed": true
+    }
+  ]
+}

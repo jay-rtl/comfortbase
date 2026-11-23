@@ -117,7 +117,7 @@ try {
     if (propertyResult.title !== expectedTitle || propertyResult.dates !== 0 || propertyResult.booking.some(link => link.href || link.disabled !== 'true' || !link.text.toLowerCase().includes('coming soon'))) failures.push({ interaction: `property booking ${propertySlug}`, result: propertyResult });
   }
   await navigate(`http://127.0.0.1:4173${basePath}/stays/the-sydney-base`); await delay(350);
-  const galleryTest = await send('Runtime.evaluate', { expression: `document.querySelector('[data-gallery]').click();({open:document.querySelector('.modal').classList.contains('open'),hidden:document.querySelector('.modal').getAttribute('aria-hidden')})`, returnByValue: true });
+  const galleryTest = await send('Runtime.evaluate', { expression: `document.querySelector('[data-project-photo]').click();({open:document.querySelector('.project-dialog').open,hidden:String(!document.querySelector('.project-dialog').open)})`, returnByValue: true });
   if (!galleryTest.result.value.open || galleryTest.result.value.hidden !== 'false') failures.push({ interaction: 'property gallery', result: galleryTest.result.value });
   console.log('Interaction checks: mobile menu, concierge selector/form/FAQ, four property booking states, and property gallery completed.');
   if (exceptions.length) failures.push({ exceptions });

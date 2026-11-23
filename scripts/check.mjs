@@ -6,6 +6,7 @@ const root = path.resolve(import.meta.dirname, '..');
 const pages = ['index.html', 'bases.html', 'property.html', 'concierge.html', 'about.html', 'extended-stays.html', 'our-bases/index.html', 'virtual-concierge/index.html', 'extended-stays/index.html', 'about/index.html', 'stays/the-sydney-base/index.html', 'stays/the-riverside-base/index.html', 'stays/the-garden-base/index.html', 'stays/the-executive-base/index.html'];
 const cleanRoutes = new Set(['/', '/our-bases', '/virtual-concierge', '/extended-stays', '/about']);
 const errors = [];
+
 for (const page of pages) {
   const file = path.join(root, page);
   if (!fs.existsSync(file)) { errors.push(`Missing ${page}`); continue; }
@@ -51,8 +52,30 @@ const firstListing = properties.sydney;
 const firstPage = fs.readFileSync(path.join(root, 'stays/the-sydney-base/index.html'), 'utf8');
 if (!firstListing?.detailsPending || [firstListing.guests, firstListing.bedrooms, firstListing.bathrooms].some(value => value !== null)) errors.push('Sydney listing must not invent unconfirmed capacity');
 if (!firstPage.includes('q=-33.8700073,151.194134') || !firstPage.includes('data-property-map><h2>Location')) errors.push('Sydney listing is missing the supplied map location');
-if ((firstPage.match(/data-gallery>/g) || []).length !== 1 || !firstPage.includes('View concept image')) errors.push('Sydney listing must show one labelled concept image');
+if ((firstPage.match(/data-project-photo /g) || []).length !== 17 || firstPage.includes('sydney-base-placeholder')) errors.push('Sydney listing must contain the real property gallery');
+if (!firstPage.includes('data-property-title>The Sydney Base</h1>') || (firstPage.match(/data-booking-link/g) || []).length !== 3) errors.push('Sydney listing must retain its identity and safe booking controls');
+if (!firstListing.location.includes('151 Harris St') || !firstListing.images[0].includes('151-harris-st-pyrmont')) errors.push('Harris St photography must be assigned to the Sydney listing');
+if (!firstPage.includes('sydney-booking-rail') || !firstPage.includes('sydney-content-layout')) errors.push('Sydney booking panel must span the full content layout');
+const films = JSON.parse(fs.readFileSync(path.join(root, 'config/project-151-harris-st-pyrmont-videos.json'), 'utf8')).videos;
+if (films.length !== 2 || (firstPage.match(/<video controls playsinline preload="none"/g) || []).length !== 2 || /<video[^>]*autoplay/.test(firstPage)) errors.push('Sydney must include two controlled, on-demand videos');
+for (const film of films) for (const asset of [film.src, film.poster]) if (!fs.existsSync(path.join(root, asset))) errors.push(`Sydney video asset missing: ${asset}`);
+if (fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8').includes('/projects/151-harris-st-pyrmont/')) errors.push('Standalone project route must not remain in the sitemap');
+if (fs.readFileSync(path.join(root, 'index.html'), 'utf8').includes('id="featured-project"')) errors.push('Photography must live inside the Sydney Base, not a homepage feature');
 if (/Secure parking|Fast Wi-Fi|From 3:00 pm|South Yarra/.test(firstPage)) errors.push('Sydney listing still contains dummy property facts');
 if (!firstPage.includes('stays/the-sydney-base/')) errors.push('Sydney canonical route is missing');
+const project = JSON.parse(fs.readFileSync(path.join(root, 'config/project-151-harris-st-pyrmont.json'), 'utf8'));
+if (project.images.length !== 38 || project.images.filter(image => image.category === 'before').length !== 5) errors.push('Featured project must preserve the 33 completed and 5 before image records');
+for (const image of project.images) {
+  if (!image.alt || !image.originalSha256 || image.variants.length !== 4) errors.push(`Featured project: incomplete image record ${image.id}`);
+  for (const variant of [...image.variants, ...(image.avif || [])]) {
+    if (!fs.existsSync(path.join(root, variant.src))) errors.push(`Featured project: missing responsive image ${variant.src}`);
+  }
+}
+const projectPage = firstPage;
+if ((projectPage.match(/data-project-photo /g) || []).length !== 17) errors.push('Featured project must have 17 curated gallery links');
+if (properties.sydney.externalBookingUrl || /available for (rent|sale)/i.test(projectPage)) errors.push('Sydney booking availability is not confirmed');
+for (const href of projectPage.matchAll(/href="([^"]*#[^"]+)"/g)) {
+  if (href[1].startsWith('#')) errors.push('Featured project contains a fragment-only link affected by the shared base path');
+}
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
-console.log(`Checked ${pages.length} pages and ${Object.keys(properties || {}).length} property records: markup, booking configuration, metadata and local asset references OK.`);
+console.log(`Checked ${pages.length} pages, ${Object.keys(properties || {}).length} property records and ${project.images.length} featured-project photographs: markup, metadata and local assets OK.`);

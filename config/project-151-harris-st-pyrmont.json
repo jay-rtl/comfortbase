@@ -1,0 +1,1402 @@
+{
+  "title": "151 Harris St, Pyrmont",
+  "subtitle": "A Fresh Perspective on Urban Living",
+  "source": "Client-provided completed-property and before-photograph archives",
+  "originals": ".local/source-assets/151-harris-st-pyrmont",
+  "images": [
+    {
+      "id": "street-frontage",
+      "category": "exterior",
+      "original": "Front.jpg",
+      "originalSha256": "6cf195225b477fac95c39ec9a1d046c553ea525532eefc9de7dee8c36336c48b",
+      "originalBytes": 3133067,
+      "width": 2581,
+      "height": 3872,
+      "alt": "Front elevation of the two-storey terrace at 151 Harris St",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-640.webp",
+          "bytes": 102116
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-800.webp",
+          "bytes": 162740
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-1280.webp",
+          "bytes": 420488
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-1920.webp",
+          "bytes": 875892
+        }
+      ]
+    },
+    {
+      "id": "street-frontage-wide",
+      "category": "exterior",
+      "original": "Front 2.jpg",
+      "originalSha256": "f7c386eaae975863cdafba24960eb82e50c8f0fe6120678b73d44a47d91aba87",
+      "originalBytes": 3735419,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Terrace facade and neighbouring buildings along Harris Street",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-wide-640.webp",
+          "bytes": 49100
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-wide-800.webp",
+          "bytes": 77650
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-wide-1280.webp",
+          "bytes": 211950
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-wide-1920.webp",
+          "bytes": 474912
+        }
+      ]
+    },
+    {
+      "id": "street-frontage-detail",
+      "category": "exterior",
+      "original": "Front 3.jpg",
+      "originalSha256": "a566b19500800622469a6decb6b6e760ccedb24a33c2874762e13c8580df8569",
+      "originalBytes": 4249646,
+      "width": 2581,
+      "height": 3872,
+      "alt": "Iron balcony and front gate of the Harris Street terrace",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-detail-640.webp",
+          "bytes": 137404
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-detail-800.webp",
+          "bytes": 227892
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-detail-1280.webp",
+          "bytes": 604670
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/exterior/street-frontage-detail-1920.webp",
+          "bytes": 1235980
+        }
+      ]
+    },
+    {
+      "id": "living-fireplace",
+      "category": "living",
+      "original": "Living.jpg",
+      "originalSha256": "bcfcce15b92b24bbe63728bcd219909c3ecea0727723ca4f8bb793476f7d3241",
+      "originalBytes": 3232246,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Living room with a timber fireplace, green sofa and cream armchair",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-fireplace-640.webp",
+          "bytes": 21498
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-fireplace-800.webp",
+          "bytes": 34210
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-fireplace-1280.webp",
+          "bytes": 91808
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-fireplace-1920.webp",
+          "bytes": 202948
+        }
+      ]
+    },
+    {
+      "id": "living-to-dining",
+      "category": "living",
+      "original": "Living 2.jpg",
+      "originalSha256": "ced37b78504763ac28b83aa3d0686c80c680aa5d180300c61f59f59e491ac1b9",
+      "originalBytes": 4008940,
+      "width": 4134,
+      "height": 2756,
+      "alt": "View from the living room towards the dining table, staircase and kitchen doorway",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-to-dining-640.webp",
+          "bytes": 27330
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-to-dining-800.webp",
+          "bytes": 44708
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-to-dining-1280.webp",
+          "bytes": 125928
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-to-dining-1920.webp",
+          "bytes": 280272
+        }
+      ],
+      "avif": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-to-dining-640.avif",
+          "bytes": 22118
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-to-dining-800.avif",
+          "bytes": 34203
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-to-dining-1280.avif",
+          "bytes": 87880
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/living/living-to-dining-1920.avif",
+          "bytes": 190156
+        }
+      ]
+    },
+    {
+      "id": "fireplace-armchair",
+      "category": "living",
+      "original": "Living details.jpg",
+      "originalSha256": "efcaa7a70866be6fcbe62b1ae26f2bbd58707259ba6db9557ffdb388b1bc0f43",
+      "originalBytes": 6148423,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Timber mantel and arched black fireplace beside a textured cream armchair",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/living/fireplace-armchair-640.webp",
+          "bytes": 25608
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/living/fireplace-armchair-800.webp",
+          "bytes": 39400
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/living/fireplace-armchair-1280.webp",
+          "bytes": 95008
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/living/fireplace-armchair-1920.webp",
+          "bytes": 189476
+        }
+      ]
+    },
+    {
+      "id": "dining-fireplace",
+      "category": "dining",
+      "original": "Dining.jpg",
+      "originalSha256": "1b56db49c457c9ff464a0bc5032a16b66c996314653bbec6bf554446c4903648",
+      "originalBytes": 4349144,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Dining table beside the original timber fireplace, with the kitchen doorway beyond",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-fireplace-640.webp",
+          "bytes": 18474
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-fireplace-800.webp",
+          "bytes": 26032
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-fireplace-1280.webp",
+          "bytes": 54884
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-fireplace-1920.webp",
+          "bytes": 102916
+        }
+      ]
+    },
+    {
+      "id": "dining-staircase",
+      "category": "dining",
+      "original": "Dining 2.jpg",
+      "originalSha256": "ead56d2e9add04451142191d552ec247513dc59af8dc88e81a3debfe45e22d31",
+      "originalBytes": 4704772,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Light timber dining table beside the staircase and fireplace",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-staircase-640.webp",
+          "bytes": 21422
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-staircase-800.webp",
+          "bytes": 30926
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-staircase-1280.webp",
+          "bytes": 68540
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-staircase-1920.webp",
+          "bytes": 138550
+        }
+      ]
+    },
+    {
+      "id": "dining-to-living",
+      "category": "dining",
+      "original": "Dining 3.jpg",
+      "originalSha256": "ead92891f0c1d84c3aa24591a8be46d2c33578cd35b7362f351aa6dabf285bae",
+      "originalBytes": 5830799,
+      "width": 2581,
+      "height": 3872,
+      "alt": "View from the dining room towards the living room and front entrance",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-to-living-640.webp",
+          "bytes": 50014
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-to-living-800.webp",
+          "bytes": 75862
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-to-living-1280.webp",
+          "bytes": 189000
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-to-living-1920.webp",
+          "bytes": 420712
+        }
+      ]
+    },
+    {
+      "id": "dining-mantel",
+      "category": "dining",
+      "original": "Dining 4.jpg",
+      "originalSha256": "686de593f11509da4e8da233a7e704c6956eddf8274327b7b57decc52c36bfeb",
+      "originalBytes": 3844264,
+      "width": 2581,
+      "height": 3872,
+      "alt": "Dining setting, pendant light and timber mantel",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-mantel-640.webp",
+          "bytes": 30556
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-mantel-800.webp",
+          "bytes": 44294
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-mantel-1280.webp",
+          "bytes": 93884
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-mantel-1920.webp",
+          "bytes": 176046
+        }
+      ]
+    },
+    {
+      "id": "dining-and-living",
+      "category": "dining",
+      "original": "Dining Living.jpg",
+      "originalSha256": "11875365d49b759fd8a288cee8ed54a86173eec007b958d0aca4ba4d5aea929a",
+      "originalBytes": 3634981,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Connected dining and living rooms with the timber staircase at the side",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-and-living-640.webp",
+          "bytes": 29536
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-and-living-800.webp",
+          "bytes": 43354
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-and-living-1280.webp",
+          "bytes": 101862
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/dining/dining-and-living-1920.webp",
+          "bytes": 214330
+        }
+      ]
+    },
+    {
+      "id": "kitchen-overview",
+      "category": "kitchen",
+      "original": "Kitchen.jpg",
+      "originalSha256": "e88f9e1af09c09762a71fe18eab0708e6403bdf8d559bb92807aa7fd59e4b27c",
+      "originalBytes": 3369552,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Kitchen with timber cupboards, a gas cooker and open shelving",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-overview-640.webp",
+          "bytes": 28332
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-overview-800.webp",
+          "bytes": 41184
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-overview-1280.webp",
+          "bytes": 96864
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-overview-1920.webp",
+          "bytes": 199856
+        }
+      ]
+    },
+    {
+      "id": "kitchen-cabinetry",
+      "category": "kitchen",
+      "original": "Kitchen 2.jpg",
+      "originalSha256": "0ffa3cac9cc9968fc5632e29d6e6f1106bf6e65dbcdca2cee2ef7b5bcefc8923",
+      "originalBytes": 3189912,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Timber kitchen cabinetry and worktop beneath a skylight",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-cabinetry-640.webp",
+          "bytes": 26612
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-cabinetry-800.webp",
+          "bytes": 38398
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-cabinetry-1280.webp",
+          "bytes": 86628
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-cabinetry-1920.webp",
+          "bytes": 175326
+        }
+      ]
+    },
+    {
+      "id": "kitchen-cooker",
+      "category": "kitchen",
+      "original": "Kitchen 3.jpg",
+      "originalSha256": "e09613f606b1addc75fde442b47c86dc8e35803e41d78689a76f9cfdab1230ef",
+      "originalBytes": 2598111,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Gas cooker and timber worktop with a coffee machine",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-cooker-640.webp",
+          "bytes": 32774
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-cooker-800.webp",
+          "bytes": 48902
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-cooker-1280.webp",
+          "bytes": 115570
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-cooker-1920.webp",
+          "bytes": 240080
+        }
+      ]
+    },
+    {
+      "id": "kitchen-sink",
+      "category": "kitchen",
+      "original": "Kitchen sink.jpg",
+      "originalSha256": "b4b950d5fc17f724b623aa6399e65212108c698c86562f1b1664933e2e60d62c",
+      "originalBytes": 5031524,
+      "width": 3872,
+      "height": 2581,
+      "alt": "Kitchen sink with black tapware and open white shelves",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-sink-640.webp",
+          "bytes": 30994
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-sink-800.webp",
+          "bytes": 44870
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-sink-1280.webp",
+          "bytes": 101244
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/kitchen/kitchen-sink-1920.webp",
+          "bytes": 199834
+        }
+      ]
+    },
+    {
+      "id": "bedroom-balcony",
+      "category": "bedroom",
+      "original": "Bed .jpg",
+      "originalSha256": "afe7ec98baeb93aeb923088d1478b2d3b4ea9835185bbbdf0b09db3c80767332",
+      "originalBytes": 5006302,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Bedroom with timber floors and open doors to the front balcony",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-balcony-640.webp",
+          "bytes": 20194
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-balcony-800.webp",
+          "bytes": 30366
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-balcony-1280.webp",
+          "bytes": 74724
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-balcony-1920.webp",
+          "bytes": 162694
+        }
+      ]
+    },
+    {
+      "id": "bedroom-open-doors",
+      "category": "bedroom",
+      "original": "Bed 2.jpg",
+      "originalSha256": "09c9017db958486a7453fef36d6094e9fc3edf1bcf1b68efa94d3c379d236100",
+      "originalBytes": 4557034,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Bed and bedside tables beside open balcony doors",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-open-doors-640.webp",
+          "bytes": 19668
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-open-doors-800.webp",
+          "bytes": 28808
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-open-doors-1280.webp",
+          "bytes": 66262
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-open-doors-1920.webp",
+          "bytes": 133122
+        }
+      ]
+    },
+    {
+      "id": "bedroom-window",
+      "category": "bedroom",
+      "original": "Bed 3.jpg",
+      "originalSha256": "240a84c2444b57dcb391e07ebd155da4a23429088270d280f342bfb1f2923786",
+      "originalBytes": 4212222,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Bedroom with a timber-framed window and framed artwork",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-window-640.webp",
+          "bytes": 15026
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-window-800.webp",
+          "bytes": 22058
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-window-1280.webp",
+          "bytes": 50014
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-window-1920.webp",
+          "bytes": 101930
+        }
+      ]
+    },
+    {
+      "id": "bedroom-window-detail",
+      "category": "bedroom",
+      "original": "Bed details.jpg",
+      "originalSha256": "11f1b03179a32bee94be2c9587449d869f9c91030efec9ba18ee9e0477ba45cb",
+      "originalBytes": 7322395,
+      "width": 2581,
+      "height": 3872,
+      "alt": "Pillows beneath a timber window looking onto a flowering tree",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-window-detail-640.webp",
+          "bytes": 79498
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-window-detail-800.webp",
+          "bytes": 124888
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-window-detail-1280.webp",
+          "bytes": 306170
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-window-detail-1920.webp",
+          "bytes": 637378
+        }
+      ]
+    },
+    {
+      "id": "bedroom-linen-detail",
+      "category": "bedroom",
+      "original": "Bed details .jpg",
+      "originalSha256": "68d97bb0275951f59197a98cd3408daaad70965acdd084930ccb851d5a1cf79a",
+      "originalBytes": 3795079,
+      "width": 2581,
+      "height": 3872,
+      "alt": "Layered bed linen beside the open balcony doors",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-linen-detail-640.webp",
+          "bytes": 33384
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-linen-detail-800.webp",
+          "bytes": 48262
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-linen-detail-1280.webp",
+          "bytes": 101906
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/bedroom/bedroom-linen-detail-1920.webp",
+          "bytes": 186310
+        }
+      ]
+    },
+    {
+      "id": "bathroom-overview",
+      "category": "bathroom",
+      "original": "Bath.jpg",
+      "originalSha256": "7c10368fcc701633ac6e2379d419bcbed330a970b0213afa6c9a8fdc0ce7386f",
+      "originalBytes": 4481134,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Tiled bathroom with a bath, glass shower enclosure and white vanity",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bathroom-overview-640.webp",
+          "bytes": 14844
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bathroom-overview-800.webp",
+          "bytes": 22820
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bathroom-overview-1280.webp",
+          "bytes": 54136
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bathroom-overview-1920.webp",
+          "bytes": 111386
+        }
+      ]
+    },
+    {
+      "id": "bathroom-vanity",
+      "category": "bathroom",
+      "original": "Bath 2.jpg",
+      "originalSha256": "4d518b61a5fe3d7dece17809bbf0b47b42fddf207a300260e35b79ac4c7fc6fc",
+      "originalBytes": 3917253,
+      "width": 2581,
+      "height": 3872,
+      "alt": "White bathroom basin and mirror against pale tiles",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bathroom-vanity-640.webp",
+          "bytes": 23830
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bathroom-vanity-800.webp",
+          "bytes": 34056
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bathroom-vanity-1280.webp",
+          "bytes": 69204
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bathroom-vanity-1920.webp",
+          "bytes": 131108
+        }
+      ]
+    },
+    {
+      "id": "bath-detail",
+      "category": "bathroom",
+      "original": "bathub.jpg",
+      "originalSha256": "58511f9de6d853eed62464ad88765aff609df69bcf949f99866f3deebbdb6a45",
+      "originalBytes": 2783954,
+      "width": 2581,
+      "height": 3872,
+      "alt": "White bath and chrome taps against pale pink tiles",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bath-detail-640.webp",
+          "bytes": 10550
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bath-detail-800.webp",
+          "bytes": 14642
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bath-detail-1280.webp",
+          "bytes": 29140
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/bath-detail-1920.webp",
+          "bytes": 52408
+        }
+      ]
+    },
+    {
+      "id": "shower-detail",
+      "category": "bathroom",
+      "original": "Shower details..jpg",
+      "originalSha256": "c426f686316cf00d01dc84d5bdb78db018ab821225c0e37b8b454f18e2af5c7d",
+      "originalBytes": 3512641,
+      "width": 2581,
+      "height": 3872,
+      "alt": "Chrome shower fittings and tiled border",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/shower-detail-640.webp",
+          "bytes": 25848
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/shower-detail-800.webp",
+          "bytes": 37060
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/shower-detail-1280.webp",
+          "bytes": 74320
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/bathroom/shower-detail-1920.webp",
+          "bytes": 129204
+        }
+      ]
+    },
+    {
+      "id": "courtyard-seating",
+      "category": "outdoor",
+      "original": "Courtyard.jpg",
+      "originalSha256": "fbe54f4bb0f177bc099ab313ff05cdb1a01244cd6b28c621a582e55bb153481e",
+      "originalBytes": 4575807,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Brick courtyard with outdoor seating beneath a flowering jacaranda",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/courtyard-seating-640.webp",
+          "bytes": 61230
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/courtyard-seating-800.webp",
+          "bytes": 92840
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/courtyard-seating-1280.webp",
+          "bytes": 228894
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/courtyard-seating-1920.webp",
+          "bytes": 491870
+        }
+      ]
+    },
+    {
+      "id": "courtyard-tree",
+      "category": "outdoor",
+      "original": "Courtyard 2.jpg",
+      "originalSha256": "cfc577d6218c895943b35a2f6319f1f3d5a6b823e0eff48952ff0dd48d60c962",
+      "originalBytes": 2978913,
+      "width": 2581,
+      "height": 3872,
+      "alt": "Courtyard chairs, timber fence and jacaranda branches",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/courtyard-tree-640.webp",
+          "bytes": 165604
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/courtyard-tree-800.webp",
+          "bytes": 258292
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/courtyard-tree-1280.webp",
+          "bytes": 661322
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/courtyard-tree-1920.webp",
+          "bytes": 1389690
+        }
+      ]
+    },
+    {
+      "id": "balcony-ironwork",
+      "category": "outdoor",
+      "original": "Balcony.jpg",
+      "originalSha256": "3783a4535f4a786312f548f8885a98f717fb874a72a6abdbae6ce7a6fc8401bb",
+      "originalBytes": 5056184,
+      "width": 4134,
+      "height": 2756,
+      "alt": "Covered balcony with ornate iron railings overlooking Harris Street",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/balcony-ironwork-640.webp",
+          "bytes": 73080
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/balcony-ironwork-800.webp",
+          "bytes": 112966
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/balcony-ironwork-1280.webp",
+          "bytes": 284468
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/outdoor/balcony-ironwork-1920.webp",
+          "bytes": 622568
+        }
+      ]
+    },
+    {
+      "id": "jacaranda-detail",
+      "category": "details",
+      "original": "Detail shot.jpg",
+      "originalSha256": "eaff138bae0dca097d4d27322e81f18db11d3312fdeca49c6d5b3cf4883bc3e1",
+      "originalBytes": 4292666,
+      "width": 2581,
+      "height": 3872,
+      "alt": "Purple jacaranda blossoms against a blue sky",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/details/jacaranda-detail-640.webp",
+          "bytes": 179960
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/details/jacaranda-detail-800.webp",
+          "bytes": 270714
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/details/jacaranda-detail-1280.webp",
+          "bytes": 610972
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/details/jacaranda-detail-1920.webp",
+          "bytes": 1166006
+        }
+      ]
+    },
+    {
+      "id": "composite-1",
+      "category": "composites",
+      "original": "Dypstitch_1.jpg",
+      "originalSha256": "625ff128ac4e0948441d4c207989e1b82c99ef905fd0d15472e2f0ef422a38e2",
+      "originalBytes": 4706196,
+      "width": 3676,
+      "height": 2756,
+      "alt": "Client-supplied paired project photographs, composition 1",
+      "variants": [
+        {
+          "width": 640,
+          "height": 480,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-1-640.webp",
+          "bytes": 58410
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-1-800.webp",
+          "bytes": 92334
+        },
+        {
+          "width": 1280,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-1-1280.webp",
+          "bytes": 254978
+        },
+        {
+          "width": 1919,
+          "height": 1439,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-1-1920.webp",
+          "bytes": 615612
+        }
+      ]
+    },
+    {
+      "id": "composite-2",
+      "category": "composites",
+      "original": "Dypstitch_2.jpg",
+      "originalSha256": "da05549f1db3d92bb0f2aa5a4adff55f9735dd2fdbb7dde4cd6161cc992d06b5",
+      "originalBytes": 3839268,
+      "width": 3676,
+      "height": 2756,
+      "alt": "Client-supplied paired project photographs, composition 2",
+      "variants": [
+        {
+          "width": 640,
+          "height": 480,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-2-640.webp",
+          "bytes": 95968
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-2-800.webp",
+          "bytes": 146508
+        },
+        {
+          "width": 1280,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-2-1280.webp",
+          "bytes": 357018
+        },
+        {
+          "width": 1919,
+          "height": 1439,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-2-1920.webp",
+          "bytes": 784948
+        }
+      ]
+    },
+    {
+      "id": "composite-3",
+      "category": "composites",
+      "original": "Dypstitch_3.jpg",
+      "originalSha256": "7fb6cb77920f6b3013f121281f5af11a36ed1a6245030f592969678842f745c8",
+      "originalBytes": 2784431,
+      "width": 3676,
+      "height": 2756,
+      "alt": "Client-supplied paired project photographs, composition 3",
+      "variants": [
+        {
+          "width": 640,
+          "height": 480,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-3-640.webp",
+          "bytes": 33074
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-3-800.webp",
+          "bytes": 48738
+        },
+        {
+          "width": 1280,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-3-1280.webp",
+          "bytes": 118570
+        },
+        {
+          "width": 1919,
+          "height": 1439,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-3-1920.webp",
+          "bytes": 255966
+        }
+      ]
+    },
+    {
+      "id": "composite-4",
+      "category": "composites",
+      "original": "Dypstitch_4.jpg",
+      "originalSha256": "88af98e3d196d56a39724228ac9bea371d6f76953f2dff936d7b24aaf92dbcf2",
+      "originalBytes": 3688386,
+      "width": 3676,
+      "height": 2756,
+      "alt": "Client-supplied paired project photographs, composition 4",
+      "variants": [
+        {
+          "width": 640,
+          "height": 480,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-4-640.webp",
+          "bytes": 27150
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-4-800.webp",
+          "bytes": 38414
+        },
+        {
+          "width": 1280,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-4-1280.webp",
+          "bytes": 85206
+        },
+        {
+          "width": 1919,
+          "height": 1439,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-4-1920.webp",
+          "bytes": 177602
+        }
+      ]
+    },
+    {
+      "id": "composite-5",
+      "category": "composites",
+      "original": "Dypstitch_5.jpg",
+      "originalSha256": "1d8849c6972f37abd1242cd938519c9e06a9e1e0da9437b9d61cc0d87fe79d2e",
+      "originalBytes": 4907018,
+      "width": 3676,
+      "height": 2756,
+      "alt": "Client-supplied paired project photographs, composition 5",
+      "variants": [
+        {
+          "width": 640,
+          "height": 480,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-5-640.webp",
+          "bytes": 17644
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-5-800.webp",
+          "bytes": 24500
+        },
+        {
+          "width": 1280,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-5-1280.webp",
+          "bytes": 52088
+        },
+        {
+          "width": 1919,
+          "height": 1439,
+          "src": "assets/projects/151-harris-st-pyrmont/composites/composite-5-1920.webp",
+          "bytes": 98738
+        }
+      ]
+    },
+    {
+      "id": "before-street-oblique",
+      "category": "before",
+      "original": "A7R03316.jpg",
+      "originalSha256": "ad6b855ddb444662b7ef2d663de15296a2a0b8b6c89777f55cc83b6637a46780",
+      "originalBytes": 5718717,
+      "width": 4160,
+      "height": 6240,
+      "alt": "Before: oblique view of the Harris Street terrace and neighbouring facades",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-oblique-640.webp",
+          "bytes": 115338
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-oblique-800.webp",
+          "bytes": 178800
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-oblique-1280.webp",
+          "bytes": 437102
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-oblique-1920.webp",
+          "bytes": 913590
+        }
+      ]
+    },
+    {
+      "id": "before-street-front",
+      "category": "before",
+      "original": "A7R03310.jpg",
+      "originalSha256": "c6ebeb119b7bcc10623a3841487cc708e453da5ef655b1d726f2130605292b1e",
+      "originalBytes": 5463881,
+      "width": 3734,
+      "height": 5601,
+      "alt": "Before: front elevation of the Harris Street terrace",
+      "variants": [
+        {
+          "width": 640,
+          "height": 960,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-front-640.webp",
+          "bytes": 89772
+        },
+        {
+          "width": 800,
+          "height": 1200,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-front-800.webp",
+          "bytes": 131064
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-front-1280.webp",
+          "bytes": 299710
+        },
+        {
+          "width": 1920,
+          "height": 2880,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-front-1920.webp",
+          "bytes": 627964
+        }
+      ]
+    },
+    {
+      "id": "before-dining",
+      "category": "before",
+      "original": "A7R03329.jpg",
+      "originalSha256": "add79d0c81409d0d284152955794791da90a6a00bf09a4af9e7e317dc92e4125",
+      "originalBytes": 6212965,
+      "width": 6240,
+      "height": 4160,
+      "alt": "Before: unfurnished dining room with timber staircase, fireplace and kitchen doorway",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-dining-640.webp",
+          "bytes": 17012
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-dining-800.webp",
+          "bytes": 24222
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-dining-1280.webp",
+          "bytes": 50670
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-dining-1920.webp",
+          "bytes": 95426
+        }
+      ]
+    },
+    {
+      "id": "before-street-wide",
+      "category": "before",
+      "original": "A7R03313.jpg",
+      "originalSha256": "bad24bc36d447e031af93cb17df961eec97cbd4562f88d06d92825304244c5b9",
+      "originalBytes": 5906084,
+      "width": 6240,
+      "height": 4160,
+      "alt": "Before: wider street view of the terrace frontage",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-wide-640.webp",
+          "bytes": 60862
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-wide-800.webp",
+          "bytes": 91444
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-wide-1280.webp",
+          "bytes": 209224
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-street-wide-1920.webp",
+          "bytes": 440480
+        }
+      ]
+    },
+    {
+      "id": "before-living",
+      "category": "before",
+      "original": "A7R03319.jpg",
+      "originalSha256": "0fb6277e72db99b567975a809d7b69fd539e5f2694e8ef95355f062c4bf9b25c",
+      "originalBytes": 5559043,
+      "width": 6240,
+      "height": 4160,
+      "alt": "Before: unfurnished living room with timber fireplace and doorway towards the kitchen",
+      "variants": [
+        {
+          "width": 640,
+          "height": 427,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-living-640.webp",
+          "bytes": 20836
+        },
+        {
+          "width": 799,
+          "height": 533,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-living-800.webp",
+          "bytes": 30198
+        },
+        {
+          "width": 1279,
+          "height": 853,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-living-1280.webp",
+          "bytes": 66798
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "assets/projects/151-harris-st-pyrmont/before/before-living-1920.webp",
+          "bytes": 137504
+        }
+      ]
+    }
+  ]
+}
