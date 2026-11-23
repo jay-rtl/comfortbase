@@ -31,7 +31,7 @@ The included Node preview server also provides clean routes and permanent redire
 
 ## Content note
 
-The Sydney Base uses client-provided photographs of 151 Harris St, Pyrmont. Its capacity, amenities and booking details remain unconfirmed. Other property listings and generated images remain concept content pending verified client data and photography.
+151 Harris St, Pyrmont uses client-provided photographs of 151 Harris St, Pyrmont. Its capacity, amenities and booking details remain unconfirmed. Other property listings and generated images remain concept content pending verified client data and photography.
 
 ## Local visual redesign
 
@@ -49,7 +49,7 @@ This uses an isolated local browser profile and produces ignored `qa-*.png` scre
 
 ## Featured project photography
 
-The 151 Harris St, Pyrmont photographs belong to **The Sydney Base**, at `/comfortbase/stays/the-sydney-base/`. Its cards on the homepage and Our Bases use the real property photograph. The full gallery and comparisons are inside that existing listing; there is no separate homepage project feature. The former `/comfortbase/projects/151-harris-st-pyrmont/` URL redirects to The Sydney Base and is excluded from the sitemap. Capacity, amenities and booking details remain unconfirmed.
+The 151 Harris St, Pyrmont photographs belong to **151 Harris St, Pyrmont**, at `/comfortbase/stays/the-sydney-base/`. Its cards on the homepage and Our Bases use the real property photograph. The full gallery and comparisons are inside that existing listing; there is no separate homepage project feature. The former `/comfortbase/projects/151-harris-st-pyrmont/` URL redirects to 151 Harris St, Pyrmont and is excluded from the sitemap. Capacity, amenities and booking details remain unconfirmed.
 
 `config/project-151-harris-st-pyrmont.json` catalogs all 33 completed-property photographs and five before photographs, including exact supplied filenames, original SHA-256 hashes, dimensions, alt text and responsive display copies. The source archive's bedroom filename is `Bed .jpg` (including the space), rather than `Bed.jpg`.
 
@@ -57,9 +57,9 @@ Unmodified originals are retained under `.local/source-assets/151-harris-st-pyrm
 
 The living comparison pairs `A7R03319.jpg` with `Living 2.jpg`, using the timber mantel, arched fireplace and kitchen doorway as references. The dining comparison pairs `A7R03329.jpg` with `Dining 2.jpg`, using the staircase, fireplace and kitchen doorway. The exterior comparison pairs `A7R03310.jpg` with `Front.jpg`, using the front gate, balcony ironwork and neighbouring facades. Camera positions differ, so all comparisons use labeled side-by-side photographs rather than an overlaid slider. Before images receive only proportional resizing and compression, without cropping, retouching or tonal changes.
 
-To regenerate display assets, make Pillow available to Python and run `python scripts/prepare-project-images.py` with the originals in place. Normal builds use the manifest and display copies; Pillow and the source archives are not required for deployment. `scripts/build-featured-project.mjs` generates the Sydney Base photography page and updates its listing cards. Project styling and interactions are isolated in `assets/projects/151-harris-st-pyrmont/project.css` and `project.js`.
+To regenerate display assets, make Pillow available to Python and run `python scripts/prepare-project-images.py` with the originals in place. Normal builds use the manifest and display copies; Pillow and the source archives are not required for deployment. `scripts/build-featured-project.mjs` generates 151 Harris St, Pyrmont photography page and updates its listing cards. Project styling and interactions are isolated in `assets/projects/151-harris-st-pyrmont/project.css` and `project.js`.
 
-Both supplied films are included in The Sydney Base at `#property-videos`, with a direct link near the page heading. Originals are preserved in `.local/source-assets/151-harris-st-pyrmont/video/`. Optimized 1280x720 H.264/AAC MP4 copies and posters live in `assets/projects/151-harris-st-pyrmont/video/`; `config/project-151-harris-st-pyrmont-videos.json` records provenance, hashes and file details. To regenerate, make imageio-ffmpeg available on PYTHONPATH and run `python scripts/prepare-project-videos.py`. Videos use native controls, playsinline, preload="none" and no autoplay. The preview server supports video byte ranges for seeking. The desktop booking rail now spans the entire Sydney content area and stops before the footer; below 981px it yields to the existing mobile layout and inline enquiry link.
+Both supplied films are included in 151 Harris St, Pyrmont at `#property-videos`, with a direct link near the page heading. Originals are preserved in `.local/source-assets/151-harris-st-pyrmont/video/`. Optimized 1280x720 H.264/AAC MP4 copies and posters live in `assets/projects/151-harris-st-pyrmont/video/`; `config/project-151-harris-st-pyrmont-videos.json` records provenance, hashes and file details. To regenerate, make imageio-ffmpeg available on PYTHONPATH and run `python scripts/prepare-project-videos.py`. Videos use native controls, playsinline, preload="none" and no autoplay. The preview server supports video byte ranges for seeking. The desktop booking rail now spans the entire Sydney content area and stops before the footer; below 981px it yields to the existing mobile layout and inline enquiry link.
 
 Run the existing browser regression suite and the additional project suite:
 

@@ -77,10 +77,10 @@ for (const property of Object.values(properties)) {
     html = html.replace(/<div class="detail-section" data-property-stay>[\s\S]*?<\/div>/, '<div class="detail-section" data-property-stay><h2>Stay information</h2><p>Check-in, check-out, parking and house rules are to be confirmed.</p></div>');
     html = html.replace(/<button data-gallery><img data-property-image="[12]"[^>]*><\/button>/g, '').replace('class="gallery"', 'class="gallery gallery-single"').replace('View gallery · 3 images', 'View concept image');
     html = html.replace('Check live availability, select your dates and securely complete your reservation with our booking partner.', 'Booking details are coming soon. Contact us to enquire about this property.');
-    html = html.replace('Availability and reservations are managed through our booking partner.', '<a href="mailto:admin@comfortbase.com.au?subject=The%20Sydney%20Base%20enquiry">Enquire about The Sydney Base</a>');
+    html = html.replace('Availability and reservations are managed through our booking partner.', '<a href="mailto:admin@comfortbase.com.au?subject=151%20Harris%20St%2C%20Pyrmont%20enquiry">Enquire about 151 Harris St, Pyrmont</a>');
   }
   if (property.mapUrl) {
-    html = html.replace('<div class="detail-section" data-property-map hidden></div>', '<div class="detail-section" data-property-map><h2>Location</h2><p>Map pin for the supplied location. Exact property address to be confirmed.</p><iframe class="property-map" title="The Sydney Base location map" src="' + escapeHtml(property.mapEmbedUrl) + '" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-links"><a class="text-link" href="' + escapeHtml(property.mapUrl) + '" target="_blank" rel="noopener noreferrer">Open Google Maps ↗</a></div></div>');
+    html = html.replace('<div class="detail-section" data-property-map hidden></div>', '<div class="detail-section" data-property-map><h2>Location</h2><p>Map pin for the supplied location. Exact property address to be confirmed.</p><iframe class="property-map" title="151 Harris St, Pyrmont location map" src="' + escapeHtml(property.mapEmbedUrl) + '" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-links"><a class="text-link" href="' + escapeHtml(property.mapUrl) + '" target="_blank" rel="noopener noreferrer">Open Google Maps ↗</a></div></div>');
   }
   const output = path.join(root, 'stays', property.slug, 'index.html');
   fs.mkdirSync(path.dirname(output), { recursive: true });

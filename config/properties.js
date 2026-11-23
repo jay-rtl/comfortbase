@@ -7,18 +7,18 @@
 window.COMFORT_BASE_PROPERTIES = {
   sydney: {
     slug: 'the-sydney-base',
-    title: 'The Sydney Base',
-    location: '151 Harris St · Pyrmont, Sydney',
+    title: '151 Harris St, Pyrmont',
+    location: 'Pyrmont, Sydney',
     guests: null,
     bedrooms: null,
     bathrooms: null,
     detailsPending: true,
     photoProject: '151-harris-st-pyrmont',
-    description: 'Explore The Sydney Base at 151 Harris St, Pyrmont, Sydney, through client-provided photographs of its living spaces, outdoor areas and architectural details.',
+    description: 'Explore 151 Harris St, Pyrmont, Sydney, through client-provided photographs of its living spaces, outdoor areas and architectural details.',
     parking: 'To be confirmed.',
     nearby: 'Explore the surrounding area using the map below. Local recommendations will be added once confirmed.',
     images: ['assets/projects/151-harris-st-pyrmont/living/living-to-dining-800.webp'],
-    imageAlts: ['The Sydney Base at 151 Harris St, Pyrmont: living room looking towards the dining area'],
+    imageAlts: ['151 Harris St, Pyrmont: living room looking towards the dining area'],
     mapUrl: 'https://www.google.com/maps?q=-33.8700073,151.194134',
     mapEmbedUrl: 'https://www.google.com/maps?q=-33.8700073,151.194134&z=17&output=embed',
     externalBookingUrl: ''

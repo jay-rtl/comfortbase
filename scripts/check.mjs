@@ -53,14 +53,14 @@ const firstPage = fs.readFileSync(path.join(root, 'stays/the-sydney-base/index.h
 if (!firstListing?.detailsPending || [firstListing.guests, firstListing.bedrooms, firstListing.bathrooms].some(value => value !== null)) errors.push('Sydney listing must not invent unconfirmed capacity');
 if (!firstPage.includes('q=-33.8700073,151.194134') || !firstPage.includes('data-property-map><h2>Location')) errors.push('Sydney listing is missing the supplied map location');
 if ((firstPage.match(/data-project-photo /g) || []).length !== 17 || firstPage.includes('sydney-base-placeholder')) errors.push('Sydney listing must contain the real property gallery');
-if (!firstPage.includes('data-property-title>The Sydney Base</h1>') || (firstPage.match(/data-booking-link/g) || []).length !== 3) errors.push('Sydney listing must retain its identity and safe booking controls');
-if (!firstListing.location.includes('151 Harris St') || !firstListing.images[0].includes('151-harris-st-pyrmont')) errors.push('Harris St photography must be assigned to the Sydney listing');
+if (!firstPage.includes('data-property-title>151 Harris St, Pyrmont</h1>') || (firstPage.match(/data-booking-link/g) || []).length !== 3) errors.push('Sydney listing must retain its identity and safe booking controls');
+if (firstListing.location !== 'Pyrmont, Sydney' || !firstListing.images[0].includes('151-harris-st-pyrmont')) errors.push('Harris St photography must be assigned to the Sydney listing');
 if (!firstPage.includes('sydney-booking-rail') || !firstPage.includes('sydney-content-layout')) errors.push('Sydney booking panel must span the full content layout');
 const films = JSON.parse(fs.readFileSync(path.join(root, 'config/project-151-harris-st-pyrmont-videos.json'), 'utf8')).videos;
 if (films.length !== 2 || (firstPage.match(/<video controls playsinline preload="none"/g) || []).length !== 2 || /<video[^>]*autoplay/.test(firstPage)) errors.push('Sydney must include two controlled, on-demand videos');
 for (const film of films) for (const asset of [film.src, film.poster]) if (!fs.existsSync(path.join(root, asset))) errors.push(`Sydney video asset missing: ${asset}`);
 if (fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8').includes('/projects/151-harris-st-pyrmont/')) errors.push('Standalone project route must not remain in the sitemap');
-if (fs.readFileSync(path.join(root, 'index.html'), 'utf8').includes('id="featured-project"')) errors.push('Photography must live inside the Sydney Base, not a homepage feature');
+if (fs.readFileSync(path.join(root, 'index.html'), 'utf8').includes('id="featured-project"')) errors.push('Photography must live inside the property listing, not a homepage feature');
 if (/Secure parking|Fast Wi-Fi|From 3:00 pm|South Yarra/.test(firstPage)) errors.push('Sydney listing still contains dummy property facts');
 if (!firstPage.includes('stays/the-sydney-base/')) errors.push('Sydney canonical route is missing');
 const project = JSON.parse(fs.readFileSync(path.join(root, 'config/project-151-harris-st-pyrmont.json'), 'utf8'));

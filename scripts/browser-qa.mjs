@@ -110,7 +110,7 @@ try {
   const concierge = conciergeTest.result.value;
   if (!concierge.service || !concierge.status.includes('Demo mode') || !concierge.faq) failures.push({ interaction: 'concierge controls', result: concierge });
 
-  for (const [propertySlug, expectedTitle] of [['the-sydney-base','The Sydney Base'],['the-riverside-base','The Riverside Base'],['the-garden-base','The Garden Base'],['the-executive-base','The Executive Base']]) {
+  for (const [propertySlug, expectedTitle] of [['the-sydney-base','151 Harris St, Pyrmont'],['the-riverside-base','The Riverside Base'],['the-garden-base','The Garden Base'],['the-executive-base','The Executive Base']]) {
     await navigate(`http://127.0.0.1:4173${basePath}/stays/${propertySlug}`); await delay(350);
     const propertyTest = await send('Runtime.evaluate', { expression: `({title:document.querySelector('[data-property-title]').textContent,dates:document.querySelectorAll('.booking-panel input[type="date"]').length,booking:[...document.querySelectorAll('[data-booking-link]')].map(a=>({href:a.getAttribute('href'),disabled:a.getAttribute('aria-disabled'),text:a.textContent.trim()}))})`, returnByValue: true });
     const propertyResult = propertyTest.result.value;
